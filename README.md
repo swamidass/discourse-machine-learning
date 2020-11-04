@@ -1,10 +1,70 @@
-# discourse-machine-learning
+Discourse Machine Learning
+==========================
 
-Add a short description here!
+An open source project that gives tools and utilities for applying machine learning tools to Discourse Forums (https://discourse.org).
 
-## Description
 
-A longer description of your project goes here...
+
+
+Description
+===========
+
+
+Discourse is modern forum software for your community. Use it as a mailing list, discussion forum, long-form chat room, and more. It is becoming more widely used.  Discourse has a REST API based on JSON (https://docs.discourse.org/). Reading public data does not require authentication. Writing data does. It also has a webhook framework based on JSON (https://meta.discourse.org/t/setting-up-webhooks/49045).
+
+
+This package's goal is to build:
+
+1. Pipelines that interacts with Discourse's REST API to download and maintain data from a forum into structured data in a format suitable for machine learning and data mining.
+
+3. A frameworks for specific tasks that interact with the local data store and Discourse to accomplish particular functions, guided by machine learning.
+
+4. Implementations of machine learning (or data mining) powered tools that make use of these frameworks to do useful activities.
+
+
+Roadmap
+========
+
+We are currently in pre-alpha stage, and are working with this initial roadmap.
+
+1. Build initial implementation that enables snapshot of forum data using REST API. Backend may be plain text files or neo4j.
+2. Build first framework, which will enable text analysis of forum posts.
+3. Build first tool that uses framework to do simple textual analysis of forum posts using a simple data mining algorithm (e.g. Word Clouds).
+4. Build first tool that uses more complex textual analysis using machine learning tools.
+5. Assess project and decide next steps to add to roadmap.
+
+Once we have a useful API and tools, we will refactor ensure good test coverage, and submit to PyPi.
+
+Future Goals
+============
+
+- Support for multiple storage backends (e.g. cloud, text files, neo4j, postgres)
+- Support for generating snapshots from Discourse database dumps/backups.
+- Incremental update of data snapshots using the REST API (to the extent that this is possible)
+- A REST server that interacts with Discourse's webhook framework to keep data repository snapshots up-to-date, and trigger particular actions.
+- Configurability in what data is stored and included in the snapshots.
+- Frameworks/tools for performing actions in discourse through the API (e.g. tagging topics and auto-moderation).
+
+License
+=========
+
+MIT
+
+
+
+Note
+====
+
+This project has been set up using PyScaffold 3.2.3. For details and usage
+information on PyScaffold see https://pyscaffold.)
+
+
+
+Note
+====
+
+This project has been set up using PyScaffold 3.2.3. For details and usage
+information on PyScaffold see https://pyscaffold.)
 
 ## Installation
 
